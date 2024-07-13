@@ -27,7 +27,7 @@ if [ -L /data/web_static/current ]; then
 fi
 
 # Create new symbolic link
-ln -s /data/web_static/releases/test/ /data/web_static/current
+sudo ln -s /data/web_static/releases/test/ /data/web_static/current
 
 # Give ownership to ubuntu
 sudo chown -R ubuntu:ubuntu /data
