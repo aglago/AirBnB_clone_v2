@@ -19,7 +19,7 @@ cat << EOF | sudo tee /data/web_static/releases/test/index.html > /dev/null
 </html>
 EOF
 
-# Create new symbolic link
+# Create new symbolic link, delete first if already exists
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 
 # Give ownership to ubuntu
