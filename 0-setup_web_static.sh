@@ -19,13 +19,8 @@ cat << EOF | sudo tee /data/web_static/releases/test/index.html > /dev/null
 </html>
 EOF
 
-# Remove symbolic link if exists
-if [ -L /data/web_static/current ]; then
-	sudo rm /data/web_static/current;
-fi
-
 # Create new symbolic link
-sudo ln -s /data/web_static/releases/test/ /data/web_static/current
+sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 
 # Give ownership to ubuntu
 sudo chown -R ubuntu:ubuntu /data
