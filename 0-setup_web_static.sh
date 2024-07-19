@@ -26,10 +26,10 @@ sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 sudo chown -R ubuntu:ubuntu /data
 
 # Udate Nginx configuration to serve some content to hbnb_static
-sudo sed -i "s|server_name _;|&\n\n\tlocation /hbnb_static {\n\t\talias /data/web_static/current/;\n\t}|" /etc/nginx/sites-available/default
+sudo sed -i "s|server_name _;|&\n\n\tlocation /hbnb_static {\n\t\talias /data/web_static/current/index.html;\n\t}|" /etc/nginx/sites-available/default
 
 # Restart Nginx
-sudo nginx -s reload
+sudo service nginx restart
 
 # Exit with status 0
 exit 0
