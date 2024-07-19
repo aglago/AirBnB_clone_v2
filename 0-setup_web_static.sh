@@ -29,7 +29,7 @@ sudo chown -R ubuntu:ubuntu /data
 sudo sed -i "s|server_name _;|&\n\n\tlocation /hbnb_static {\n\t\talias /data/web_static/current/;\n\t}|" /etc/nginx/sites-available/default
 
 # Restart Nginx
-sudo nginx -s reloa
+sudo nginx -s reload
 
 # Exit with status 0
 exit 0
